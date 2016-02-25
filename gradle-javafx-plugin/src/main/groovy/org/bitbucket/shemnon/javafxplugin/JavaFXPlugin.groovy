@@ -294,6 +294,7 @@ class JavaFXPlugin implements Plugin<Project> {
                 'updateMode',
                 'vendor',
                 'width',
+                'signBundle',
         ].each {prop -> task.conventionMapping[prop] = basicExtensionMapping.curry(prop) }
 
         task.conventionMapping.version = {convention, aware -> ('unspecified' == project.version) ? '0.0.0' : project.version }

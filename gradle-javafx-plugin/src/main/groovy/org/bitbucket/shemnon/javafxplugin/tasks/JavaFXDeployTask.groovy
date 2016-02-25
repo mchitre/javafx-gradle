@@ -87,6 +87,7 @@ class JavaFXDeployTask extends ConventionTask {
     Boolean installSystemWide
     boolean menu
     boolean shortcut
+    boolean signBundle
 
     @InputFiles
     FileCollection inputFiles
@@ -172,6 +173,7 @@ class JavaFXDeployTask extends ConventionTask {
         deployParams.systemWide = getInstallSystemWide()
         deployParams.needMenu = getMenu()
         deployParams.needShortcut = getShortcut()
+        deployParams.signBundle = getSignBundle()
 
         deployParams.allPermissions = true //FIXME hardcoded
 
